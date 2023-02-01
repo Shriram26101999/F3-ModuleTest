@@ -55,8 +55,8 @@ async function getTimeZone(lat, lon) {
 async function getUpdatedTimeZone(input) {
     try {
        
-        //const request = await fetch(` https://api.geoapify.com/v1/geocode/search?text=${input}&format=json&apiKey=d10cc5663af8499493057bf98ebd586c`)
-        const request = await fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=19.15928&lon=77.310094&format=json&apiKey=1e8fbd7b05184381b559f66c62e368c0`)
+        const request = await fetch(` https://api.geoapify.com/v1/geocode/search?text=${input}&format=json&apiKey=d10cc5663af8499493057bf98ebd586c`)
+       // const request = await fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=19.15928&lon=77.310094&format=json&apiKey=1e8fbd7b05184381b559f66c62e368c0`)
         const response = await request.json()
         const timeZoneData = response;
         insertDataUpdated(timeZoneData)
